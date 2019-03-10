@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hdtd.dao.BasicMapper">
+	<!-- 写多表关联查询 -->
+	<insert id="savee" parameterType="com.hdtd.domain.CBreaker">
+		INSERT INTO CBreaker  ( 
+		p2_CusVars,	 fill_bounds,	lw,	  groupObjId,   voltype,  
+<!-- 		 index,    -->
+		ls,   devref,   fm,   app,   y,   recordApp,   x,   w,   tfr,   
+		enantiType,   keyid,   fc,   id,   zoomScaleType,   lc,   keyidDesc,   
+		switchapp,   h,   p_DyColorFlag,   idinmodel,   af,   centerflag,   domain )
+		 VALUES
+		 ( #{p2_CusVars,jdbcType=VARCHAR},	 #{fill_bounds},	#{lw},	  #{groupObjId},   #{voltype},  
+<!-- 		  #{indexx},    -->
+		 #{ls},   #{devref},   #{fm},   #{app},   #{y},   #{recordApp},   #{x},   #{w},   #{tfr},   
+		#{enantiType},   #{keyid},   #{fc},   #{id},   #{zoomScaleType},   #{lc},   #{keyidDesc},   
+		#{switchapp},   #{h},   #{p_DyColorFlag},   #{idinmodel},   #{af},   #{centerflag},   #{domain} )
+	</insert>
+</mapper>
